@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScheduleItemActivity"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/lblDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дата:"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txbDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="01.01.2021"
+        android:textSize="24dp"
+        app:layout_constraintTop_toBottomOf="@id/lblDate"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <TextView
+        android:id="@+id/lblGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Группа:"
+        app:layout_constraintTop_toBottomOf="@id/txbDate"/>
+
+    <Spinner
+        android:id="@+id/selGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lblGroup" />
+
+    <TextView
+        android:id="@+id/lblDiscipline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Преподаватель:"
+        app:layout_constraintTop_toBottomOf="@id/selGroup"/>
+
+    <Spinner
+        android:id="@+id/selDiscipline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lblDiscipline" />
+
+    <TextView
+        android:id="@+id/lblTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Преподаватель:"
+        app:layout_constraintTop_toBottomOf="@id/selDiscipline"/>
+
+    <Spinner
+        android:id="@+id/selTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lblTeacher" />
+
+    <TextView
+        android:id="@+id/lblAuditory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Аудитория:"
+        app:layout_constraintTop_toBottomOf="@id/selTeacher"/>
+
+    <Spinner
+        android:id="@+id/selAuditory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lblAuditory" />
+
+    <TextView
+        android:id="@+id/lblPair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Номер пары:"
+        app:layout_constraintTop_toBottomOf="@id/selAuditory"/>
+
+    <Spinner
+        android:id="@+id/selPair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lblPair" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btnDelete"
+        android:text="Сохранить"
+        android:onClick="btnSaveClick"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="#ff0000"
+        android:text="Удалить"
+        android:onClick="btnDeleteClick"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
